@@ -1,0 +1,15 @@
+.bigblue {
+  color: DodgerBlue;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+  background-color: red;
+}
+
+h1 {
+  color: DodgerBlue;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+  background-color: green;
+}
