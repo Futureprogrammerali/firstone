@@ -11,6 +11,7 @@ export default class FormikForm extends React.Component {
     selectednumber: 0,
     overage: false,
     insidecounty: 1,
+    class: "formik",
   };
   constructor(props) {
     super(props);
@@ -38,15 +39,22 @@ export default class FormikForm extends React.Component {
 
     return schema;
   };
+  changestyle = () => {
+    let newclassname = this.state.class;
+    newclassname = newclassname === "formik" ? "formik2" : "formik";
+    this.setState({ class: newclassname });
+    alert(newclassname);
+  };
   form = (props) => {
     return (
-      <form className="formik" onSubmit={props.handleSubmit}>
+      <form className={this.state.class} onSubmit={props.handleSubmit}>
         <h1>
           play Formik{" "}
           <a href="https://formik.org/docs/overview" target="blank">
             Formik
           </a>
         </h1>
+        <input type="button" onClick={this.changestyle} value=" change styl" />
         <label>Name</label> <Field name="name" />
         <ErrorMessage name="name"></ErrorMessage>
         <br />
